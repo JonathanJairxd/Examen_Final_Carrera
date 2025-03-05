@@ -10,6 +10,8 @@ import routerConferencista from './routers/conferencista_routes.js';
 
 import routerAuditorio from './routers/auditorio_routes.js';
 
+import routerReserva from './routers/reserva_routes.js';
+
 
 // Inicializaciones
 const app = express()
@@ -33,6 +35,8 @@ app.use('/api/usuario',routerUsuario)
 app.use('/api/conferencista',routerConferencista)
 
 app.use('/api/auditorio',routerAuditorio)
+
+app.use('/api/reserva',routerReserva)
 
 // Rutas no encontradas
 app.use((req,res)=>res.status(404).send("Endpoint no encontrado - 404"))
