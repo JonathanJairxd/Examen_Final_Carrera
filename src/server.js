@@ -6,6 +6,8 @@ import cors from 'cors';
 // Se importan las rutas del usuario
 import routerUsuario from './routers/usuario_routes.js';
 
+import routerConferencista from './routers/conferencista_routes.js';
+
 // Inicializaciones
 const app = express()
 dotenv.config()
@@ -25,8 +27,7 @@ app.get('/',(req,res)=>{
 // Ruta del usuario
 app.use('/api/usuario',routerUsuario)
 
-
-
+app.use('/api/conferencista',routerConferencista)
 
 // Rutas no encontradas
 app.use((req,res)=>res.status(404).send("Endpoint no encontrado - 404"))
