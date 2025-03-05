@@ -3,6 +3,9 @@ import express from 'express'
 import dotenv from 'dotenv'
 import cors from 'cors';
 
+// Se importan las rutas del usuario
+import routerUsuario from './routers/usuario_routes.js';
+
 // Inicializaciones
 const app = express()
 dotenv.config()
@@ -14,14 +17,14 @@ app.use(cors())
 // Middlewares 
 app.use(express.json())
 
-
-// Variables globales
-
-
 // Rutas 
 app.get('/',(req,res)=>{
     res.send("Server on")
 })
+
+// Ruta del usuario
+app.use('/api/usuario',routerUsuario)
+
 
 
 
