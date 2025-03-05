@@ -1,4 +1,3 @@
-import conferencista from "../models/conferencista.js"
 import Conferencista from "../models/conferencista.js"
 import mongoose from "mongoose"
 
